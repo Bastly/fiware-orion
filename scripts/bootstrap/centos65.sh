@@ -76,8 +76,7 @@ sudo /etc/init.d/mongod start
 # Set up a more convenient workspace
 ln -fs /vagrant /home/vagrant/fiware-orion
 
-# Qt Creator building, Projects->Build Steps->Custom Process Step
-# command:
-#   vagrant 
-# arguments:
-#   ssh -c 'make di -C fiware-orion'
+# make and install context broker
+cd fiware-orion
+make
+sudo make install
